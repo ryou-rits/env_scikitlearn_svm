@@ -8,10 +8,10 @@ WORKDIR /tmp/work
 COPY requirements.txt ${PWD}
 RUN pip install -r requirements.txt
 
-ENV TZ=ASIA/Tokyo
+ENV TZ=Asia/Tokyo
 ENV USER user1
 
-RUN useradd -m ${USER} --build 1000
+RUN useradd -m ${USER} --uid 1000
 RUN gpasswd -a ${USER} sudo
 RUN echo "{USER}:password" | chpasswd
 
