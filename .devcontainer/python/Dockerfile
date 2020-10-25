@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
 && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp/work
-COPY riquirements.txt ${PWD}
+COPY requirements.txt ${PWD}
 RUN pip install -r requirements.txt
 
 ENV TZ=ASIA/Tokyo
