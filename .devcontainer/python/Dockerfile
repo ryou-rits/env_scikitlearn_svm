@@ -13,6 +13,6 @@ ENV USER user1
 
 RUN useradd -m ${USER} --uid 1000
 RUN gpasswd -a ${USER} sudo
-RUN echo "{USER}:password" | chpasswd
+RUN echo "${USER}:password" | chpasswd
 
 USER ${USER}
